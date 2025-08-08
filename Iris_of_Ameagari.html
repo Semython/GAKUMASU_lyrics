@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>雨上がりのアイリス</title>
+</head>
+<body>
+    <header>
+        <h1>雨上がりのアイリス</h1>
+    </header>
+    <h3>作詞：こだまさおり　作曲・編曲：神前暁</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SPXHpau0jJI?si=f_s_FyKCRSzNeWvG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <div id="sidebar"></div>
+    <link rel="stylesheet" href="style.css">
+    <hr>
+    <label><input type="checkbox" class="part-toggle" value="Saki">花海咲季</label>
+    <label><input type="checkbox" class="part-toggle" value="Temari">月村手毬</label>
+    <label><input type="checkbox" class="part-toggle" value="Kotone">藤田ことね</label>
+
+
+    <div id="lyrics">
+             <span class="line" data-part="Temari">雨上がりを歌うアイリス</span>
+             <br>
+             <span class="line" data-part="Saki">強い風に未来信じて</span>
+             <br>
+             <br>
+             <span class="line" data-part="Saki">ひとりぼっちみたいな自分のこと</span>
+             <br>
+             <span class="line" data-part="Temari">いちばん気にしてたのは</span>
+             <span class="line" data-part="Kotone">自分自身で</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">傘も持たず飛び出す　いつもの道</span>
+             <br>
+             <span class="line" data-part="Kotone">なんて自由なんだろう</span>　
+             <span class="line" data-part="Saki">強がっていいでしょ？</span>
+             <br>
+             <span class="line" data-part="Temari">全部…</span>
+             <span class="line" data-part="Saki Temari">意味があることにしよう</span>
+             <br>
+             <span class="line" data-part="Kotone">濡れた髪に</span>　
+             <span class="line" data-part="Saki Kotone">アスファルトに</span>　
+             <span class="line" data-part="Saki Temari Kotone">もうすぐ希望が届く</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">雨上がりを目指すアイリス</span>
+             <br>
+             <span class="line" data-part="Saki">育ちながら足を止めずに</span>　
+             <span class="line" data-part="Temari">遠い空に探してるシンパシー</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">たどり着いてみせるアイリス</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">カラダ中に光あつめて</span>　
+             <span class="line" data-part="Temari">さあ思い切り輝きにいくよ！</span>
+             <br>
+             <br>
+             <span class="line" data-part="Temari">晴れない夜も鼓動が主張してた</span>
+             <br>
+             <span class="line" data-part="Saki">いつか目覚める予感　受け取ってほしくて</span>
+             <br>
+             <span class="line" data-part="Kotone">ぎゅっと守ってた蕾　ほどく</span>
+             <br>
+             <span class="line" data-part="Temari">待ち焦がれた</span>
+             <span class="line" data-part="Temari Kotone">朝はなんで</span>　
+             <span class="line" data-part="Saki Temari Kotone">こんなに自然な勇気</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">雨上がりを目指すアイリス</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">育ちながら足を止めずに</span>　
+             <span class="line" data-part="Kotone">同じ空でキミと出会うために</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">枯れない夢<sup><a href="#note1">※</a></sup>証明したい　応えたい約束があるね</span>
+             <br>
+             <span class="line" data-part="Saki">さあ世界中巻き込んでいくよ！</span>
+             <br>
+             <br>
+             <span class="line" data-part="Saki">洗われてく…街もわたしの今日も</span>
+             <br>
+             <span class="line" data-part="Saki Kotone">ねえ、奇跡みたい</span>
+             <br>
+             <br>
+             <span class="line" data-part="Saki Kotone">雨上がりを歌うアイリス</span>
+             <br>
+             <span class="line" data-part="Saki Temari">強い風に未来信じて</span>　
+             <span class="line" data-part="Saki Temari Kotone">わたしらしい色で咲かせるんだ</span>
+             <br>
+             <span class="line" data-part="Saki Temari Kotone">加速する生きてる鼓動　あたらしい光を浴びて</span>
+             <br>
+             <span class="line" data-part="Saki">ああ　今ここが</span>　
+             <span class="line" data-part="Saki Temari Kotone">世界の真ん中！</span>
+
+    </div>
+    <footer>
+        <hr>
+        <p id="note1"><strong>※</strong> MV内記載の歌詞は"足りない夢"</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        fetch("sidebar.html")
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById("sidebar").innerHTML = html;
+          });
+    </script>
+
+</body>
+</html>

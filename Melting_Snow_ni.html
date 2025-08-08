@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>雪解けに</title>
+</head>
+<body>
+    <header>
+        <h1>雪解けに</h1>
+    </header>
+    <h3>作詞：大山恭子(Rebrast)　作曲・編曲：河原レオ(Rebrast)</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZnUy-qYDhAo?si=qOVvd8jvPvdWZOGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <div id="sidebar"></div>
+    <link rel="stylesheet" href="style.css">
+    <hr>
+    <label><input type="checkbox" class="part-toggle" value="Temari">月村手毬</label>
+    <label><input type="checkbox" class="part-toggle" value="Mao">有村麻央</label>
+    <label><input type="checkbox" class="part-toggle" value="China">倉本千奈</label>
+    
+
+    <div id="lyrics">
+             <span class="line" data-part="China">言わず　語らず　微笑みを</span>
+             <span class="line" data-part="Temari Mao China">湛え</span>
+             <br>
+             <br>
+             <span class="line" data-part="Temari">さざめくたそがれ　囃子が灯りが　速雨を憂えても</span>
+             <br>
+             <span class="line" data-part="Mao">偶さか交わした瞳は　諦めに濡れることを知らない</span>
+             <br>
+             <span class="line" data-part="China">ため息の花弁　集めた花筏　見送れば月が照らすから</span>
+             <br>
+             <span class="line" data-part="Temari Mao">雪解けに色づき　ふくらんだ感情</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">自由へと羽ばたいてゆくの</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">はらはら　はらはら　空に知られずとも</span>
+             <br>
+             <span class="line" data-part="Temari">踊るように巡り逢う心</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">あなたが新たな喜びを知り</span>
+             <br>
+             <span class="line" data-part="China">垂れ下がる　鈍の雲　晴らすまで</span>
+             <br>
+             <span class="line" data-part="Mao">祈りは唯　爰に</span>
+             <span class="line" data-part="Temari Mao China">在るから</span>
+             <br>
+             <br>
+             <span class="line" data-part="Mao">さめざめこころね　涙の色ならとうに褪せてしまった</span>
+             <br>
+             <span class="line" data-part="China">想いは逆しま　紡いだ言の葉は尚更熱を帯びて</span>
+             <br>
+             <span class="line" data-part="Temari">摘まみ取る花弁　数えて占えば花冷えの闇が嗤うから</span>
+             <br>
+             <span class="line" data-part="Mao China">雪解けが奏でる清らかな音色に</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">明けてゆく日々を重ねるの</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">はらはら　はらはら　浮き立つ人いきれ</span>
+             <br>
+             <span class="line" data-part="Mao">営みに吹き返す心</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">伸ばした枝葉の先で震える</span>
+             <br>
+             <span class="line" data-part="Temari">その夢は手折られることはない</span>
+             <br>
+             <span class="line" data-part="China">わたしは只　爰に</span>
+             <span class="line" data-part="Temari Mao China">在るまま</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">舞い踊れ</span>
+             <br>
+             <br>
+             <span class="line" data-part="Mao">たとえ語るに落ちれば楽だとて</span>
+             <br>
+             <span class="line" data-part="Temari">言わず　語らず　微笑みを湛え</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">胸に戯える風</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">はらはら　はらはら　たまゆらよもすがら</span>
+             <br>
+             <span class="line" data-part="China">踊りましょう　巡りゆく<ruby>瞬間<rt>とき</rt></ruby>と</span>
+             <br>
+             <span class="line" data-part="Temari Mao China">はるかな空から咲く陽炎が</span>
+             <br>
+             <span class="line" data-part="Mao">ありなしの鈍の雲　晴らすまで</span>
+             <br>
+             <span class="line" data-part="Temari">祈りは唯　爰に</span>
+             <span class="line" data-part="Temari Mao China">在るから</span>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        fetch("sidebar.html")
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById("sidebar").innerHTML = html;
+          });
+    </script>
+
+</body>
+</html>

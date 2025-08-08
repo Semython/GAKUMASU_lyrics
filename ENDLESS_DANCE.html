@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>ENDLESS_DANCE</title>
+</head>
+<body>
+    <header>
+        <h1>ENDLESS_DANCE</h1>
+    </header>
+    <h3>作詞・作曲：首藤義勝　編曲：藤永龍太郎(Elements Garden)</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7ebkkWncYdk?si=j7PEUpyn5XtWLoXV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <div id="sidebar"></div>
+    <link rel="stylesheet" href="style.css">
+    <hr>
+    <label><input type="checkbox" class="part-toggle" value="A">A(花海佑芽/花海咲季/姫崎莉波)</label>
+    <label><input type="checkbox" class="part-toggle" value="B">B(秦谷美鈴/月村手毬/倉本千奈)</label>
+    <label><input type="checkbox" class="part-toggle" value="C">C(十王星南/藤田ことね/葛城リーリヤ)</label>　
+
+
+    <div id="lyrics">
+             <span class="line" data-part="A B C">全身　全霊　颯爽　登場</span>
+             <br>
+             <span class="line" data-part="B">皆様どうも初めまして</span>
+             <br>
+             <span class="line" data-part="A B C">疾風　閃光　覚醒　革命</span>
+             <br>
+             <span class="line" data-part="C">伝説の始まり　アラウンド　ザ・ワールド</span>
+             <br>
+             <span class="line" data-part="A B C">老若　男女　全員　集合</span>
+             <br>
+             <span class="line" data-part="A">今夜が最高のロケーション</span>
+             <br>
+             <span class="line" data-part="A B C">最速　更新　一瞬　刹那</span>
+             <br>
+             <span class="line" data-part="C">まばゆく心に焼き付けよう</span>
+             <br>
+             <span class="line" data-part="A">君との絆は誰より強く</span>
+             <br>
+             <span class="line" data-part="B">その手掲げて飛び込むよ　</span>
+             <span class="line" data-part="A B C">ワンダーランド</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　踊り狂え</span>
+             <br>
+             <span class="line" data-part="A">揺らせ揺らせダンスホール</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　狂い咲け</span>
+             <br>
+             <span class="line" data-part="C">この歌の虜になれ</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　踊り狂え</span>
+             <br>
+             <span class="line" data-part="B">まだまだもっとダンスホール</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　狂い咲け</span>
+             <br>
+             <span class="line" data-part="A">連れて行くよユートピアへ</span>
+             <br>
+             <span class="line" data-part="C">終わらせないよ　</span>
+             <span class="line" data-part="A B C">エンドレスダンス</span>
+             <br>
+             <br>
+             <span class="line" data-part="B">今日だけはルールは無用</span>
+             <br>
+             <span class="line" data-part="B">でも瞬きはナシね</span>
+             <br>
+             <span class="line" data-part="A">あっついの冷めちゃう前に</span>
+             <br>
+             <span class="line" data-part="A">ほら　全力魅せてかかってこい</span>
+             <br>
+             <span class="line" data-part="A B C">turn up turn up　盛り上がれ</span>
+             <br>
+             <span class="line" data-part="B">なんだか今日は絶好調</span>
+             <br>
+             <span class="line" data-part="A B C">turn up turn up　声枯らせ</span>
+             <br>
+             <span class="line" data-part="C">その両目に刻み込め</span>
+             <br>
+             <br>
+             <span class="line" data-part="B">手のひらと</span>
+             <span class="line" data-part="A">手のひらで</span>
+             <br>
+             <span class="line" data-part="A B">あなたのビート鳴らして</span>
+             <br>
+             <span class="line" data-part="C">忘れられない　この景色をちょうだい</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　踊り狂え</span>
+             <br>
+             <span class="line" data-part="C">揺らせ揺らせダンスホール</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　狂い咲け</span>
+             <br>
+             <span class="line" data-part="B">この歌の虜になれ</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　踊り狂え</span>
+             <br>
+             <span class="line" data-part="A">まだまだもっとダンスホール</span>
+             <br>
+             <span class="line" data-part="A B C">jump up jump up　狂い咲け</span>
+             <br>
+             <span class="line" data-part="C">連れて行くよユートピアへ</span>
+             <br>
+             <span class="line" data-part="B">終わらせないよ　</span>
+             <span class="line" data-part="A B C">エンドレスダンス</span>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        fetch("sidebar.html")
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById("sidebar").innerHTML = html;
+          });
+    </script>
+
+</body>
+</html>

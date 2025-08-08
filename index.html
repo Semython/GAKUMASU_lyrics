@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GAKUMAS LYRICS</title>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <link rel="stylesheet" href="style.css">
+  <header>
+    <h1> GAKUM@S LYRICS</h1>
+    <hr>
+  </header>
+  <h4>君と出会い、夢に翔ける―歌とダンスが上手くなるアイドル育成シミュレーションゲームこと
+  <br>
+    スマートフォン・PC用ゲームアプリ『学園アイドルマスター』の収録楽曲および関連楽曲のうち
+  <br>
+    グループ・ユニット歌唱曲の歌詞をキャラクター別に表示する非公式ファンサイトです</p></h4>
+  <span class="kobore_banashi">モチベが無くなるか、バンナムに怒られたら終わる、とても儚いサイトです。優しくしてね</span>
+  <br>
+  <br>
+  --------------------------------------------------------------------------
+  <br>
+  <div id = "update">
+    <br>
+    <div class="subtitle">最終更新</div>
+    <br>
+    <div class="child">
+    2025/08/07 - Star-mine追加。良すぎる…(<a href=Star-mine.html>ページリンク</a>)
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <br>
+
+  <span class="subtitle">Q&A</span>
+  <br>
+  <div class="child">
+    <div id="QandA">
+      Q. パート分けは何か資料を使って作ってる？
+      <br>
+      A. あまり良くない耳を澄ませたり、MVから判断して割り当てています。また、全員曲のように聞き分けが困難な楽曲はthe kobemaster様の動画を参照しています。
+      <br>
+        誓って100%の信頼に耐えるような代物ではないので、参考程度にお楽しみください。
+      <hr>
+      Q. 新曲が追加されてないので対応して
+      <br>
+      A. すいません。要望出してくれるの助かります。
+      <br>
+        特にライブ曲はアンテナ張ってなくて存在に気づいてないことも多いので、早めにフォームから要望送ってもらえるとありがたいです。
+      <hr>
+      Q. ページ右下に載せてるのは何のゲームのID？
+      <br>
+      A. アークナイツです。曲が良くて女の子がかわいくてキャラ育成要素がある点が学マスと共通してます。
+      <hr>
+      Q. 個人曲の歌詞は掲載しない？
+      <br>
+      A. 本サイトに掲載する理由付けが見つかれば掲載しますが、現時点では考えていません。
+    </div>
+  </div>
+  
+  <br>
+  <br>
+
+  <footer>
+    <hr>
+    ご意見、ご要望などありましたら<a href="https://docs.google.com/forms/d/e/1FAIpQLScl5EQtkb4Sl-CPKT54xMDTKna-VmfIXyn9aPTqPomcwegsEQ/viewform?usp=header">こちら</a>からおねがいします。
+    <span class="rightside">戦友も募集してます - [ヒグラスフィア#4042]</span>
+    <br>
+    <span class="copy_right">
+      当サイトに掲載されているすべてのコンテンツの著作権は、各権利者に帰属します。
+    </span>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("sidebar").innerHTML = html;
+      });
+    </script>
+    
+</body>
+</html>
