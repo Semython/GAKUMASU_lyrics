@@ -131,7 +131,7 @@ body {
 }
 
 /* 動画（PCでは左寄せ、最大560px） */
-.video-wrapper iframe {
+iframe {
   width: 100%;
   max-width: 560px;
   aspect-ratio: 16 / 9;
@@ -183,3 +183,4 @@ body {
     line-height: 1.6;
   }
 }
+
