@@ -1,101 +1,85 @@
+/* ====== 基本書式 ====== */
+
+/* 歌詞行（通常） */
 .line {
-    color: lightgray;
-    transition: color 0.3s ease;
-  }
-  
-  .line.active {
-    color: black; 
-    background-color: pink;
-    padding: 0 0.15em;
-    margin-left: -0.15em;
-    margin-right: -0.15em
-  }
+  color: lightgray;
+  transition: color 0.3s ease;
+}
 
+/* 担当パートの歌詞行 */
+.line.active {
+  color: black;
+  background-color: pink;
+  padding: 0 0.15em;
+  margin-left: -0.15em;
+  margin-right: -0.15em;
+}
 
-.kobore_banashi{
+/* ページ全体のリセットと基本設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* チェックボックス（拡大） */
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* 堂々と言えない話 */
+.kobore_banashi {
   font-size: 0.7em;
-  color:#888;
+  color: #888;
 }
 
-.rightside{
-  display:block;
-  text-align: right
+/* 右寄せ */
+.rightside {
+  display: block;
+  text-align: right;
 }
 
-
+/* コピーライト */
 .copy_right {
   width: 100%;
   font-size: 0.9em;
   color: #888;
   display: block;
-  text-align: center !important;
+  text-align: center;
   margin-top: 40px;
   padding: 10px;
 }
 
-.subtitle{
-  font-size:1.5em;
-  background-color:rgb(255, 255, 181);
-  padding: 0.2em 0.7em ;
-  display:inline-block;
-  border-radius:4px;
-  font-weight:bold
+/* 見出し（黄色背景） */
+.subtitle {
+  font-size: 1.5em;
+  background-color: rgb(255, 255, 181);
+  padding: 0.2em 0.7em;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-.child{
-  margin-left: 10px
+/* 子要素のちょい右寄せ */
+.child {
+  margin-left: 10px;
 }
 
-header{
-  display:flex;
-  padding-left:10px;
+/* ヘッダー */
+header {
+  display: flex;
+  padding-left: 10px;
   background-color: rgb(173, 211, 173);
-  box-shadow:0 2px 4px rgba(0,0,0,0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: center;
-}
-
-body {
-  margin-left: 220px; /* サイドバー分 + α */
-  padding: 0 20px;
-}
-
-
-  
-#QandA {
-  max-height: 20vh;
-  padding-left:5px;
-  overflow-y: auto;
-  border: 1px solid lightgray
-}
-
-
-#lyrics {
-  max-height: 50vh; /* ウィンドウ高の60%まで使う */
-  overflow-y: auto; 
-  padding: 1rem;
-  border: 1px solid #ccc;
-  margin-top: 1rem;
-  background: #fff;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.video-wrapper iframe {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 100;
 }
 
+/* サイドバー */
 #sidebar {
   width: 200px;
   position: fixed;
@@ -106,4 +90,96 @@ body {
   background: rgb(194, 222, 231);
   padding: 1em;
   box-shadow: 2px 0 5px rgba(209, 229, 255, 0.1);
+}
+
+/* 本文（PC時は左にマージン） */
+body {
+  margin-left: 220px; /* サイドバー分 + α */
+  padding: 0 20px;
+}
+
+/* Q&Aブロック */
+#QandA {
+  max-height: 20vh;
+  padding-left: 5px;
+  overflow-y: auto;
+  border: 1px solid lightgray;
+}
+
+#creater-info {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* 歌詞ブロック */
+#lyrics {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* 動画埋め込みラッパー */
+.video-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* 動画（PCでは左寄せ、最大560px） */
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* ====== スマホ向け調整 ====== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0; /* 横幅制限解除 */
+    overflow-x: hidden; /* はみ出し防止 */
+  }
+
+  #sidebar {
+    position: relative; /* 固定解除して上に移動 */
+    width: 100%; /* 横いっぱい */
+    height: auto;
+    box-shadow: none;
+    margin-top: 1rem;
+    font-size: 75%
+  }
+
+  /* 本文部分を全幅に */
+  main,
+  .content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  label {
+    margin-bottom: 8px;
+  }
+
+  /* スマホでは動画を中央寄せ＆全幅 */
+  .video-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-wrapper iframe {
+    max-width: 100%;
+  }
+
+  #lyrics {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }

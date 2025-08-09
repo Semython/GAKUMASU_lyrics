@@ -33,16 +33,15 @@ def format_html(title="ここにタイトルが入る",members="ここにメン�
     f"""<!DOCTYPE html>
 <html>
 <head>
-<meta charset=\"UTF-8\">
+    <meta charset=\"UTF-8\">
     <title>{title}</title>
 </head>
 <body>
     <header>
         <h1>{title}</h1>
     </header>
-    <h3>作詞・作曲・編曲：</h3>
+    <div id = "creater-info">作詞・作曲・編曲：</div>
     <埋め込みリンク>
-    <div id="sidebar"></div>
     <link rel=\"stylesheet\" href=\"style.css\">
     <hr>
 {members}
@@ -50,6 +49,8 @@ def format_html(title="ここにタイトルが入る",members="ここにメン�
     <div id=\"lyrics\">
 {lyrics}
     </div>
+
+    <div id="sidebar"></div>
 
     <script src=\"script.js\"></script>
     <script>
