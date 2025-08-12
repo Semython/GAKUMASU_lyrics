@@ -8,11 +8,14 @@ function updateDisplay() {
 
   spans.forEach(span => {
     const dataPart = span.dataset.part;
-    if (!dataPart) return;  
+    if (!dataPart) return;
 
-    const parts = span.dataset.part.split(' ');
+    const parts = dataPart.split(' ');
     const match = parts.some(p => selected.includes(p));
+    const soloMatch = selected.includes(dataPart);
+
     span.classList.toggle('active', match);
+    span.classList.toggle('active-solo', soloMatch);
   });
 }
 

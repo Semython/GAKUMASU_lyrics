@@ -2,11 +2,20 @@
 
 /* 歌詞行（通常） */
 .line {
-  color: lightgray;
+  color: black;
   transition: color 0.3s ease;
 }
 
 /* 担当パートの歌詞行 */
+.line.active {
+  color: black;
+  background-color: lightsalmon;
+  padding: 0 0.15em;
+  margin-left: -0.15em;
+  margin-right: -0.15em;
+}
+
+/* ソロ担当パートの歌詞行 */
 .line.active {
   color: black;
   background-color: pink;
@@ -133,11 +142,13 @@ body {
 /* 動画（PCでは左寄せ、最大560px） */
 iframe {
   width: 100%;
-  max-width: 560px;
+  max-width: 568px;
   aspect-ratio: 16 / 9;
   border: none;
   display: block;
 }
+
+
 
 /* ====== スマホ向け調整 ====== */
 @media (max-width: 768px) {
@@ -183,4 +194,3 @@ iframe {
     line-height: 1.6;
   }
 }
-
