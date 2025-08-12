@@ -16,7 +16,7 @@
 }
 
 /* ソロ担当パートの歌詞行 */
-.line.active {
+.line.active-solo {
   color: black;
   background-color: pink;
   padding: 0 0.15em;
