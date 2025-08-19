@@ -33,13 +33,23 @@ def format_html(title="ここにタイトルが入る",members="ここにメン�
     f"""<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="学園アイドルマスター収録『{title}』のキャラクター別歌詞表示ページです">
-    <meta name="keyword" content="学マス　学園アイドルマスター　{title.replace(" ","_")}　歌詞　キャラ別　パート分け　最強リセマラランキング">
-    <meta name="author" content="篠沢広は声を張れbot">
-    <meta name="robots" content="index, follow">
-    <title>White Night! White Wish!</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMP4LXM1Z2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QMP4LXM1Z2');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="学園アイドルマスター収録『{title}』のキャラクター別歌詞表示ページです">
+  <meta name="keyword" content="学マス　学園アイドルマスター　{title.replace(" ","_")}　歌詞　キャラ別　パート分け　最強リセマラランキング">
+  <meta name="author" content="篠澤広は声を張れbot">
+  <meta name="robots" content="index, follow">
+  
+  <title>{title}</title>
 </head>
 <body>
     <header>
